@@ -1,13 +1,25 @@
 <script setup>
-import {useForm} from "@inertiajs/vue3";
-import {ref} from "vue";
+import {useForm, } from "@inertiajs/vue3";
+import {onMounted, ref} from "vue";
 
+const props = defineProps({
+   sections: {type: Object,  required: true}
+});
 const isUrdu = ref(true);
 
 const form = useForm({
-   location: '',
-   designation: '',
+    options:[],
 });
+
+onMounted(() => {
+    props.sections.forEach((section) => {
+        section.questions.forEach((question) => {
+            form.options.push({section_id: section.id, question_id: question.id, option_id: '',option_other: '',});
+        })
+    })
+});
+
+
 const translate = () => isUrdu.value = !isUrdu.value;
 </script>
 
@@ -18,26 +30,35 @@ const translate = () => isUrdu.value = !isUrdu.value;
         <form>
             <div class="mb-4">
                 <label for="location" class="block text-gray-700 font-medium mb-3 font-urdu">دفتر کا مقام</label>
-                <input v-model="form.location" type="text" id="location" name="location" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+                <input type="text" id="location" name="location" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
             </div>
             <div class="mb-4">
                 <label for="designation" class="block text-gray-700 font-medium mb-2 font-urdu">ملازمت کا عنوان</label>
-                <input v-model="form.designation" type="text" id="designation" name="designation" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+                <input type="text" id="designation" name="designation" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
             </div>
+            <template v-for="section in sections" :key="section.id">
+                <h2 class="mb-2 text-xl leading-normal text-center text-gray-800 dark:text-gray-300 font-urdu" v-html="isUrdu?section.section_u:section.section_e"/>
+                <hr class="mb-4 block w-12 h-0.5 mx-auto my-5 bg-indigo-500 border-indigo-500">
+                <template v-for="question in section.questions" :key="question.id">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2 font-urdu" v-html="isUrdu?question.question_u:question.question_e"/>
+                        <div class="flex flex-wrap -mx-2">
+                            <template v-for="option in question.options" :key="option.id">
+                                <div class="px-2" :class="option.is_other?'w-1/2 flex flex-column justify-items-center gap-x-2':'w-1/4'">
+                                    <label :for="'option-'+option.id" class="block text-gray-700 font-medium mb-2 font-urdu" :class="{'flex-none': option.is_other}">
+                                        <input  type="radio" :id="'option-'+option.id" :name="'question-'+question.id"  :value="option.id" :class="isUrdu?'ml-2':'mr-2'">{{ isUrdu?option.option_u:option.option_e }}
+                                    </label>
+                                    <input v-if="option.is_other"  type="text"  class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
 
-            <h2 class="mb-2 text-xl leading-normal text-center text-gray-800 dark:text-gray-300 font-urdu">ڈیموگرافک پروفائل</h2>
-            <hr class="mb-4 block w-12 h-0.5 mx-auto my-5 bg-indigo-500 border-indigo-500">
+                </template>
 
-            <div class="mb-4">
-                <label for="gender" class="block text-gray-700 font-medium mb-2">Gender</label>
-                <select id="gender" name="gender"
-                        class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
-                    <option value="">Select gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+            </template>
+
+
             <div class="mb-4">
                 <label class="block text-gray-700 font-medium mb-2 font-urdu">جنس</label>
                 <div class="flex flex-wrap -mx-2">

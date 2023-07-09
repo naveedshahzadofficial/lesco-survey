@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('question_id')->constrained();
+            $table->text('option_e');
+            $table->text('option_u');
+            $table->boolean('is_other')->default(0)->nullable();
             $table->timestamps();
         });
     }

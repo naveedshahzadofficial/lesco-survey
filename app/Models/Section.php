@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Question extends Model
+class Section extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['question_e', 'question_u'];
+    protected $fillable = ['section_e', 'section_u', 'section_desc_e', 'section_desc_u'];
 
-    public function options(): HasMany
+    public function questions(): HasMany
     {
-        return $this->hasMany(Option::class);
+        return $this->hasMany(Question::class);
     }
 }
