@@ -33,15 +33,24 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:'.User::class,
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'phone_no' => 'required|numeric|digits:11',
+            'job_title' => 'required|string|max:255',
+            'office_location' => 'required|string|max:255',
         ]);
 
-        $user = User::create([
+        $user = User::firstOrCreate(
+            ['phone_no' => $request->phone_no,],
+            [
             'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'phone_no' => $request->phone_no,
+            'job_title' => $request->job_title,
+            'office_location' => $request->office_location,
         ]);
+
+        if(!$user->wasRecentlyCreated && $user->is_submitted) {
+            session()->flash('error', 'Your Feedback already has been submitted.');
+            return redirect()->route('register');
+        }
 
         event(new Registered($user));
 

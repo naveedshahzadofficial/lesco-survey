@@ -25,6 +25,8 @@ class QuestionSeeder extends Seeder
             new Option(['option_e'=> 'Married', 'option_u'=>'شادی شدہ', 'is_other'=>0]),
             new Option(['option_e'=> 'Other ', 'option_u'=>'دیگر', 'is_other'=>1]),
         ]);
+        $question = Question::create(['section_id'=>1, 'question_e'=> 'Marital Status', 'question_u'=>'ازدواجی حیثیت']);
+
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Age (Years)', 'question_u'=>'عمر (سال)']);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Cigarette smoking', 'question_u'=>'سگریٹ پینا']);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Monthly income', 'question_u'=>'ماہانہ آمدنی']);

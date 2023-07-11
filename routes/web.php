@@ -17,21 +17,21 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return Inertia::render('Auth/Register');
 });
 
-Route::get('/survey', [\App\Http\Controllers\SurveyController::class, 'index'])->name('survey');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('/survey', [\App\Http\Controllers\SurveyController::class, 'index'])->name('survey');
+    Route::post('/survey', [\App\Http\Controllers\SurveyController::class, 'store'])->name('survey.store');
+    Route::get('/thank-you', [\App\Http\Controllers\SurveyController::class, 'thank_you'])->name('thank-you');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

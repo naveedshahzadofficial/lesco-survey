@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('job_title')->nullable();
             $table->string('office_location')->nullable();
+            $table->boolean('is_submitted')->default(0)->nullable();
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

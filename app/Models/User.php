@@ -25,6 +25,7 @@ class User extends Authenticatable
         'password',
         'job_title',
         'office_location',
+        'is_submitted',
     ];
 
     /**
