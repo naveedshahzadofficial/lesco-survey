@@ -11,7 +11,7 @@ class Question extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['question_e', 'question_u'];
+    protected $fillable = ['question_e', 'question_u', 'question_type'];
 
     public function options(): HasMany
     {

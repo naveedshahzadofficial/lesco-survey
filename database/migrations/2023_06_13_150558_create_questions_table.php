@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('section_id')->constrained();
             $table->text('question_e');
             $table->text('question_u');
+            $table->text('question_type')->default('Radio');
             $table->softDeletes();
             $table->timestamps();
         });

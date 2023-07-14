@@ -24,7 +24,7 @@ class SurveyController extends Controller
             ],
             [
                 'question_id' => $option['question_id'],
-                'option_id' => $option['option_id'],
+                'option_id' => $option['option_id']??null,
                 'option_other' => $option['option_other'],
             ]
             );
