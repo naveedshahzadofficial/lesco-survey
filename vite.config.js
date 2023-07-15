@@ -17,4 +17,10 @@ export default defineConfig({
             },
         }),
     ],
+    resolve: {
+        alias: {
+            ziggy: 'vendor/tightenco/ziggy/dist',
+            // 'vendor/tightenco/ziggy/dist/vue.es.js' if using the Vue plugin
+        },
+    },
 });

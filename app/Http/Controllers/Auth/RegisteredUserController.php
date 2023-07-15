@@ -42,7 +42,6 @@ class RegisteredUserController extends Controller
             ['phone_no' => $request->phone_no,],
             [
             'name' => $request->name,
-            'phone_no' => $request->phone_no,
             'job_title' => $request->job_title,
             'office_location' => $request->office_location,
         ]);
@@ -51,7 +50,7 @@ class RegisteredUserController extends Controller
             session()->flash('error', 'Your Feedback already has been submitted.');
             return redirect()->route('register');
         }
-
+        $user->assignRole('user');
         event(new Registered($user));
 
         Auth::login($user);

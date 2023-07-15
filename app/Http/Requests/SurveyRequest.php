@@ -22,17 +22,10 @@ class SurveyRequest extends FormRequest
      */
     public function rules(): array
     {
-        dd($this->all());
         return [
             'options.*.question_id'=>'required',
-            'options.*.option_id'=>Rule::requiredIf(function ($value, $key, $attribute) {
-                $otherValue = request()->input('options.' . $key . '.option_other');
-                return is_null($otherValue);
-            }),
-            'options.*.option_other'=>Rule::requiredIf(function ($value, $key, $attribute) {
-                $otherValue = request()->input('options.' . $key . '.option_id');
-                return is_null($otherValue);
-            }),
+            'options.*.option_id'=>'required_without:options.*.option_other',
+            'options.*.option_other'=>'sometimes|nullable',
         ];
     }
 }

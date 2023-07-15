@@ -46,17 +46,18 @@ const submit = () => {
     <Head title="Survey" />
 
     <AuthenticatedLayout>
-    <div :dir="isUrdu ? 'rtl' : 'ltr'" class="bg-white border rounded-lg px-8 py-6 mx-auto my-8 max-w-2xl">
+    <div :dir="isUrdu ? 'rtl' : 'ltr'" class="bg-white border rounded-lg px-10 py-6 mx-auto my-8 max-w-full">
         <button @click.prevent="translate" type="button" class="py-2 px-4 inline-block text-center mb-4 rounded leading-5 text-gray-100 bg-indigo-500 border border-indigo-500 hover:text-white hover:bg-indigo-600 hover:ring-0 hover:border-indigo-600 focus:bg-indigo-600 focus:border-indigo-600 focus:outline-none focus:ring-0" v-html="isUrdu?'English':'اردو'"/>
-        <h2 class="text-2xl font-medium mb-4 font-urdu leading-[2]">لاہور الیکٹرسٹی سپلائی کمپنی کے کارکنوں میں پیشہ ورانہ حفاظت اور رسک مینجمنٹ کے طریقوں کا جائزہ</h2>
+        <h2 class="text-2xl font-medium mb-4 font-urdu leading-[2] text-center" v-if="isUrdu">لاہور الیکٹرسٹی سپلائی کمپنی کے کارکنوں میں پیشہ ورانہ حفاظت اور رسک مینجمنٹ کے طریقوں کا جائزہ</h2>
+        <h2 class="text-2xl font-medium mb-4 text-center" v-else="isUrdu">Assessment of Occupational Safety and Risk Management Practices among Workers of Lahore Electricity Supply Company</h2>
         <form @submit.prevent="submit">
             <div class="mb-4 flex justify-between">
                 <div>
-                    <label class="text-gray-700 font-medium mb-3 font-urdu">دفتر کا مقام:</label>
+                    <label :class="{ isUrdu: 'font-urdu'}" class="text-gray-700 font-medium mb-3"  >{{ isUrdu? 'دفتر کا مقام:': 'Office Location:'}}</label>
                     <span class="p-2 font-semibold">{{ $page.props.auth.user.job_title }}</span>
                 </div>
                 <div>
-                    <label for="designation" class="text-gray-700 font-medium mb-2 font-urdu">ملازمت کا عنوان:</label>
+                    <label :class="{ isUrdu: 'font-urdu'}" class="text-gray-700 font-medium mb-2">{{ isUrdu? 'ملازمت کا عنوان:': 'Job Title'}}</label>
                     <span class="p-2 font-semibold">{{ $page.props.auth.user.office_location }}</span>
 
                 </div>

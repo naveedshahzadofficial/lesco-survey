@@ -24,7 +24,7 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="name">Name (<span class="font-urdu" dir="rtl">نام</span>)</InputLabel>
 
                 <TextInput
                     id="name"
@@ -40,7 +40,7 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="phone_no" value="Mobile No." />
+                <InputLabel for="phone_no">Mobile No. (<span class="font-urdu" dir="rtl">موبائل نمبر</span>)</InputLabel>
 
                 <TextInput
                     id="phone_no"
@@ -55,7 +55,7 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="job_title" value="Job Title" />
+                <InputLabel for="job_title">Job Title (<span class="font-urdu" dir="rtl">ملازمت کا عنوان</span>)</InputLabel>
 
                 <TextInput
                     id="job_title"
@@ -70,7 +70,7 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="office_location" value="Office Location" />
+                <InputLabel for="office_location">Office Location (<span class="font-urdu" dir="rtl">دفتر کا مقام</span>)</InputLabel>
 
                 <TextInput
                     id="office_location"
@@ -86,7 +86,7 @@ const submit = () => {
 
             <div class="flex items-center justify-end mt-4">
                 <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Start Survey
+                    Start Survey (<span class="font-urdu" dir="rtl">سروے شروع کریں</span>)
                 </PrimaryButton>
             </div>
         </form>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('option_e');
             $table->text('option_u');
             $table->boolean('is_other')->default(0)->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
