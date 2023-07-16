@@ -76,13 +76,40 @@ class QuestionSeeder extends Seeder
         ]);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Less Workers for Responding Breakdown', 'question_u'=>'خرابی کی صورت میں وہاں پر ملازمین موجود ہوتے ہیں']);
         $question->options()->saveMany([
-            new Option(['option_e'=> 'Never', 'option_u'=>'جی ہاں', 'is_other'=>0]),
-            new Option(['option_e'=> 'Occasionally', 'option_u'=>'نہیں', 'is_other'=>0]),
-            new Option(['option_e'=> 'Frequently', 'option_u'=>'اگر ہاں تو براہ کرم اوور ٹائم کے ہفتہ وار اوقات کی وضاحت کریں', 'is_other'=>1]),
+            new Option(['option_e'=> 'Never', 'option_u'=>'کبھی نہیں', 'is_other'=>0]),
+            new Option(['option_e'=> 'Occasionally', 'option_u'=>'کبھی کبھار', 'is_other'=>0]),
+            new Option(['option_e'=> 'Frequently', 'option_u'=>'زیادہ تر', 'is_other'=>0]),
         ]);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Witness any occupational accident', 'question_u'=>'کام کی جگہ پر حادثہ']);
+        $question->options()->saveMany([
+            new Option(['option_e'=> 'Yes', 'option_u'=>'جی ہاں', 'is_other'=>0]),
+            new Option(['option_e'=> 'No', 'option_u'=>'نہیں', 'is_other'=>0]),
+            new Option(['option_e'=> 'Describe the accident type', 'option_u'=>'حادثے کی قسم بیان کریں', 'is_other'=>1]),
+        ]);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Safety Training ', 'question_u'=>'سیفٹی ٹریننگ']);
+        $question->options()->saveMany([
+            new Option(['option_e'=> 'Yes', 'option_u'=>'جی ہاں', 'is_other'=>0]),
+            new Option(['option_e'=> 'No', 'option_u'=>'نہیں', 'is_other'=>0]),
+            new Option(['option_e'=> 'If YES, please provide training YEAR', 'option_u'=>'اگر ہاں، تو براہ کرم تربیت کا سال فراہم کریں', 'is_other'=>1]),
+        ]);
         $question = Question::create(['section_id'=>1, 'question_e'=> 'Tool Box Talk', 'question_u'=>'ٹول باکس ٹاک']);
+        $question->options()->saveMany([
+            new Option(['option_e'=> 'Yes', 'option_u'=>'جی ہاں', 'is_other'=>0]),
+            new Option(['option_e'=> 'No', 'option_u'=>'نہیں', 'is_other'=>0]),
+            new Option(['option_e'=> 'Given by:', 'option_u'=>'کس کی طرف سے دیا گیا:', 'is_other'=>1]),
+        ]);
+
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Tries to continually improve safety levels in each department.', 'question_u'=>'ہر شعبہ میں حفاظت کی سطح کو مسلسل بہتر بنانے کی کوشش کرتے ہیں ۔']);
+        $question->options()->saveMany([
+            new Option(['option_e'=> 'Strongly Disagree', 'option_u'=>'بہت زیادہ اختلاف', 'is_other'=>0]),
+            new Option(['option_e'=> 'Disagree', 'option_u'=>'اختلاف کرنا', 'is_other'=>0]),
+            new Option(['option_e'=> 'Neutral', 'option_u'=>'غیر جانبدار', 'is_other'=>0]),
+            new Option(['option_e'=> 'Agree', 'option_u'=>'متفق', 'is_other'=>0]),
+            new Option(['option_e'=> 'Strongly agree', 'option_u'=>'بہت زیادہ اتفاق', 'is_other'=>0]),
+        ]);
+
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Tries to continually improve safety levels in each department.', 'question_u'=>'ہر شعبہ میں حفاظت کی سطح کو مسلسل بہتر بنانے کی کوشش کرتے ہیں ۔']);
+
 
     }
 }

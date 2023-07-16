@@ -70,7 +70,7 @@ const submit = () => {
                         <label class="block text-gray-700 font-medium mb-2 font-urdu" v-html="isUrdu?question.question_u:question.question_e"/>
                         <div class="flex flex-wrap -mx-2 mt-3">
                             <template v-if="question.question_type==='Radio'" v-for="option in question.options" :key="option.id">
-                                <div class="px-2" :class="option.is_other?'w-1/2 flex flex-column justify-items-center gap-x-2':'w-1/4'">
+                                <div class="px-2" :class="option.is_other?'lg:w-1/2 lg:flex lg:flex-column justify-items-center gap-x-2':'lg:w-1/4'">
                                     <label :for="'option-'+option.id" class="block text-gray-700 font-medium mb-2 font-urdu" :class="{'flex-none': option.is_other}">
                                         <input  type="radio" :id="'option-'+option.id" :name="'question-'+question.id"  :value="option.id" :class="isUrdu?'ml-2':'mr-2'" v-model="options[question.id]" >{{ isUrdu?option.option_u:option.option_e }}
                                     </label>
