@@ -100,6 +100,79 @@ class QuestionSeeder extends Seeder
         ]);
 
         $question = Question::create(['section_id'=>2, 'question_e'=> 'Tries to continually improve safety levels in each department.', 'question_u'=>'ہر شعبہ میں حفاظت کی سطح کو مسلسل بہتر بنانے کی کوشش کرتے ہیں ۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Quickly corrects any safety hazard (even if it’s costly).', 'question_u'=>'کسی بھی حفاظتی خطرے کو فوری طور پر درست کرتے ہیں (چاہے یہ مہنگا ہی کیوں نہ ہو)۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Requires each manager to help improve safety in his or her department.', 'question_u'=>'ہر مینیجر سے اپنے محکمے میں حفاظت کو بہتر بنانے میں مدد کی ضرورت ہوتی ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Uses any available information to improve existing safety rules.', 'question_u'=>'موجودہ حفاظتی قواعد کو بہتر بنانے کے لیے کسی بھی دستیاب معلومات کا استعمال کرتے ہیں ۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Listens carefully to workers’ ideas about improving safety.', 'question_u'=>'حفاظت کو بہتر بنانے کے بارے میں ملازمین کے خیالات کو غور سے سنتے ہیں ۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Considers safety when setting production speed and schedules.', 'question_u'=>'پیداوار کی رفتار اور نظام الاوقات ترتیب دیتے وقت حفاظت پر غور کرتے ہیں ۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Provides workers with a lot of information on safety issues.', 'question_u'=>'ملازمین کو حفاظتی امور پر کافی معلومات فراہم کرتے ہیں ۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>2, 'question_e'=> 'Gives safety personnel the power they need to do their job.', 'question_u'=>'حفاظتی عملے کو وہ طاقت دیتا ہے جس کی انہیں اپنا کام کرنے کی ضرورت ہوتی ہے۔']);
+        $this->commonOption($question);
+
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'makes sure we receive all the equipment needed to do the job safely', 'question_u'=>'اس بات کو یقینی بناتا ہے کہ ہمیں کام کو محفوظ طریقے سے کرنے کے لیے درکار تمام آلات مل جائیں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'frequently checks to see if we are all following the safety rules', 'question_u'=>'یہ دیکھنے کے لیے اکثر چیک کرتا ہے کہ آیا ہم سب حفاظتی اصولوں پر عمل کر رہے ہیں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'Discusses how to improve safety with us.', 'question_u'=>'ہمارے ساتھ حفاظت کو بہتر بنانے کے طریقے پر تبادلہ خیال کرتا ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'Uses explanations (not just compliance) to get us to act safely.', 'question_u'=>'ہمیں محفوظ طریقے سے کام کرنے کے لیے وضاحتیں (صرف تعمیل نہیں) استعمال کرتا ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'Reminds workers who need reminders to work safely.', 'question_u'=>'ان ملازمین کو یاد دلاتا ہے جنہیں محفوظ طریقے سے کام کرنے کے لیے یاد دہانیوں کی ضرورت ہوتی ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>3, 'question_e'=> 'Makes sure we follow all the safety rules (not just the most important ones).', 'question_u'=>'اس بات کو یقینی بناتا ہے کہ ہم تمام حفاظتی اصولوں پر عمل کرتے ہیں (صرف اہم ترین نہیں)۔']);
+        $this->commonOption($question);
+
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to perform my job in a safe manner.', 'question_u'=>'میں جانتا ہوں کہ اپنے کام کو محفوظ طریقے سے کیسے انجام دینا ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to use safety equipment and SOPs.', 'question_u'=>'میں جانتا ہوں کہ حفاظتی آلات اور SOPs کا استعمال کیسے کرنا ہے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to reduce the risk of accidents and incidents in the workplace.', 'question_u'=>'میں جانتا ہوں کہ کام کی جگہ پر حادثات اور واقعات کے خطرے کو کیسے کم کیا جائے۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know what are the hazards associated with my jobs and the necessary precautions to be taken while doing my job.', 'question_u'=>'میں جانتا ہوں کہ میری ملازمتوں سے وابستہ خطرات کیا ہیں اور اپنا کام کرتے وقت ضروری احتیاطی تدابیر اختیار کرنی ہیں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'Have you ever gone through wihout work permit?', 'question_u'=>'کیا آپ کبھی کام کی جگہ پر بغیر اجازت کے گئے ہیں؟']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>4, 'question_e'=> 'Do you have training about first aid and emergency procedures in case of any hazard?', 'question_u'=>'کیا آپ کو کسی بھی خطرے کی صورت میں ابتدائی طبی امداد اور ہنگامی طریقہ کار کے بارے میں تربیت حاصل ہے؟']);
+        $this->commonOption($question);
+
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'I use all necessary safety equipment to do my job.', 'question_u'=>'میں اپنا کام کرنے کے لیے تمام ضروری حفاظتی سامان استعمال کرتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'I carry out my work in a safe manner.', 'question_u'=>'میں اپنے کام کو محفوظ طریقے سے انجام دیتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'I follow correct safety rules and procedures while carrying out my job.', 'question_u'=>'میں اپنے کام کو انجام دیتے ہوئے صحیح حفاظتی اصولوں اور طریقہ کار پر عمل کرتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'I ensure the highest levels of safety when I carry out my job.', 'question_u'=>'جب میں اپنا کام انجام دیتا ہوں تو میں اعلیٰ ترین سطح کی حفاظت کو یقینی بناتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'Occasionally due to lack of time, I deviate from correct and safe work procedures.', 'question_u'=>'کبھی کبھار وقت کی کمی کی وجہ سے، میں صحیح اور محفوظ کام کے طریقہ کار سے ہٹ جاتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>5, 'question_e'=> 'It is not always practical to follow all safety rules and procedures while doing a job.', 'question_u'=>'کام کرتے وقت تمام حفاظتی اصولوں اور طریقہ کار پر عمل کرنا ہمیشہ ضروری نہیں ہوتا۔']);
+        $this->commonOption($question);
+
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always point out to the management of any safety-related matters are noticed in my company.', 'question_u'=>'میں ہمیشہ میری کمپنی میں کسی بھی حفاظت سے متعلق معاملات کے بارے میں بات کرتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I put extra effort to improve the safety of the workplace.', 'question_u'=>'میں کام کی جگہ کی حفاظت کو بہتر بنانے کے لیے اضافی کوشش کرتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I voluntarily carry out tasks or activities that help to improve workplace safety.', 'question_u'=>'میں رضاکارانہ طور پر کام یا سرگرمیاں انجام دیتا ہوں جو کام کی جگہ کی حفاظت کو بہتر بنانے میں مدد کرتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I encourage my co-workers to work safely.', 'question_u'=>'میں اپنے ساتھی کارکنوں کو محفوظ طریقے سے کام کرنے کی ترغیب دیتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I help my co-workers when they are working under risky or hazardous conditions (endangering themselves)', 'question_u'=>'میں اپنے ساتھی کارکنوں کی مدد کرتا ہوں جب وہ خطرناک یا خطرناک حالات میں کام کر رہے ہوں (خود کو خطرے میں ڈال رہے ہوں)']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always prefer not to work alone at highly energized areas or where there is current of around 400volts.', 'question_u'=>'میں ہمیشہ زیادہ وولٹ والے علاقوں یا ان جگہوں پر جہاں تقریباً 400 وولٹ سے زیادہ کرنٹ ہو، اکیلے کام کرنے سے بچتا ہوں۔']);
+        $this->commonOption($question);
+        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always insist my co-workers to wear safety equipments even if it is uncomfortable', 'question_u'=>'میں ہمیشہ اپنے ساتھی کارکنوں سے حفاظتی سازوسامان پہننے کی تاکید کرتا ہوں ۔']);
+        $this->commonOption($question);
+    }
+
+    public function commonOption($question)
+    {
         $question->options()->saveMany([
             new Option(['option_e'=> 'Strongly Disagree', 'option_u'=>'بہت زیادہ اختلاف', 'is_other'=>0]),
             new Option(['option_e'=> 'Disagree', 'option_u'=>'اختلاف کرنا', 'is_other'=>0]),
@@ -107,43 +180,5 @@ class QuestionSeeder extends Seeder
             new Option(['option_e'=> 'Agree', 'option_u'=>'متفق', 'is_other'=>0]),
             new Option(['option_e'=> 'Strongly agree', 'option_u'=>'بہت زیادہ اتفاق', 'is_other'=>0]),
         ]);
-
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Quickly corrects any safety hazard (even if it’s costly).', 'question_u'=>'کسی بھی حفاظتی خطرے کو فوری طور پر درست کرتے ہیں (چاہے یہ مہنگا ہی کیوں نہ ہو)۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Requires each manager to help improve safety in his or her department.', 'question_u'=>'ہر مینیجر سے اپنے محکمے میں حفاظت کو بہتر بنانے میں مدد کی ضرورت ہوتی ہے۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Uses any available information to improve existing safety rules.', 'question_u'=>'موجودہ حفاظتی قواعد کو بہتر بنانے کے لیے کسی بھی دستیاب معلومات کا استعمال کرتے ہیں ۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Listens carefully to workers’ ideas about improving safety.', 'question_u'=>'حفاظت کو بہتر بنانے کے بارے میں ملازمین کے خیالات کو غور سے سنتے ہیں ۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Considers safety when setting production speed and schedules.', 'question_u'=>'پیداوار کی رفتار اور نظام الاوقات ترتیب دیتے وقت حفاظت پر غور کرتے ہیں ۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Provides workers with a lot of information on safety issues.', 'question_u'=>'ملازمین کو حفاظتی امور پر کافی معلومات فراہم کرتے ہیں ۔']);
-        $question = Question::create(['section_id'=>2, 'question_e'=> 'Gives safety personnel the power they need to do their job.', 'question_u'=>'حفاظتی عملے کو وہ طاقت دیتا ہے جس کی انہیں اپنا کام کرنے کی ضرورت ہوتی ہے۔']);
-
-
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'makes sure we receive all the equipment needed to do the job safely', 'question_u'=>'اس بات کو یقینی بناتا ہے کہ ہمیں کام کو محفوظ طریقے سے کرنے کے لیے درکار تمام آلات مل جائیں۔']);
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'frequently checks to see if we are all following the safety rules', 'question_u'=>'یہ دیکھنے کے لیے اکثر چیک کرتا ہے کہ آیا ہم سب حفاظتی اصولوں پر عمل کر رہے ہیں۔']);
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'Discusses how to improve safety with us.', 'question_u'=>'ہمارے ساتھ حفاظت کو بہتر بنانے کے طریقے پر تبادلہ خیال کرتا ہے۔']);
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'Uses explanations (not just compliance) to get us to act safely.', 'question_u'=>'ہمیں محفوظ طریقے سے کام کرنے کے لیے وضاحتیں (صرف تعمیل نہیں) استعمال کرتا ہے۔']);
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'Reminds workers who need reminders to work safely.', 'question_u'=>'ان ملازمین کو یاد دلاتا ہے جنہیں محفوظ طریقے سے کام کرنے کے لیے یاد دہانیوں کی ضرورت ہوتی ہے۔']);
-        $question = Question::create(['section_id'=>3, 'question_e'=> 'Makes sure we follow all the safety rules (not just the most important ones).', 'question_u'=>'اس بات کو یقینی بناتا ہے کہ ہم تمام حفاظتی اصولوں پر عمل کرتے ہیں (صرف اہم ترین نہیں)۔']);
-
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to perform my job in a safe manner.', 'question_u'=>'میں جانتا ہوں کہ اپنے کام کو محفوظ طریقے سے کیسے انجام دینا ہے۔']);
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to use safety equipment and SOPs.', 'question_u'=>'میں جانتا ہوں کہ حفاظتی آلات اور SOPs کا استعمال کیسے کرنا ہے۔']);
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know how to reduce the risk of accidents and incidents in the workplace.', 'question_u'=>'میں جانتا ہوں کہ کام کی جگہ پر حادثات اور واقعات کے خطرے کو کیسے کم کیا جائے۔']);
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'I know what are the hazards associated with my jobs and the necessary precautions to be taken while doing my job.', 'question_u'=>'میں جانتا ہوں کہ میری ملازمتوں سے وابستہ خطرات کیا ہیں اور اپنا کام کرتے وقت ضروری احتیاطی تدابیر اختیار کرنی ہیں۔']);
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'Have you ever gone through wihout work permit?', 'question_u'=>'کیا آپ کبھی کام کی جگہ پر بغیر اجازت کے گئے ہیں؟']);
-        $question = Question::create(['section_id'=>4, 'question_e'=> 'Do you have training about first aid and emergency procedures in case of any hazard?', 'question_u'=>'کیا آپ کو کسی بھی خطرے کی صورت میں ابتدائی طبی امداد اور ہنگامی طریقہ کار کے بارے میں تربیت حاصل ہے؟']);
-
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'I use all necessary safety equipment to do my job.', 'question_u'=>'میں اپنا کام کرنے کے لیے تمام ضروری حفاظتی سامان استعمال کرتا ہوں۔']);
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'I carry out my work in a safe manner.', 'question_u'=>'میں اپنے کام کو محفوظ طریقے سے انجام دیتا ہوں۔']);
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'I follow correct safety rules and procedures while carrying out my job.', 'question_u'=>'میں اپنے کام کو انجام دیتے ہوئے صحیح حفاظتی اصولوں اور طریقہ کار پر عمل کرتا ہوں۔']);
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'I ensure the highest levels of safety when I carry out my job.', 'question_u'=>'جب میں اپنا کام انجام دیتا ہوں تو میں اعلیٰ ترین سطح کی حفاظت کو یقینی بناتا ہوں۔']);
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'Occasionally due to lack of time, I deviate from correct and safe work procedures.', 'question_u'=>'کبھی کبھار وقت کی کمی کی وجہ سے، میں صحیح اور محفوظ کام کے طریقہ کار سے ہٹ جاتا ہوں۔']);
-        $question = Question::create(['section_id'=>5, 'question_e'=> 'It is not always practical to follow all safety rules and procedures while doing a job.', 'question_u'=>'کام کرتے وقت تمام حفاظتی اصولوں اور طریقہ کار پر عمل کرنا ہمیشہ ضروری نہیں ہوتا۔']);
-
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always point out to the management of any safety-related matters are noticed in my company.', 'question_u'=>'میں ہمیشہ میری کمپنی میں کسی بھی حفاظت سے متعلق معاملات کے بارے میں بات کرتا ہوں۔']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I put extra effort to improve the safety of the workplace.', 'question_u'=>'میں کام کی جگہ کی حفاظت کو بہتر بنانے کے لیے اضافی کوشش کرتا ہوں۔']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I voluntarily carry out tasks or activities that help to improve workplace safety.', 'question_u'=>'میں رضاکارانہ طور پر کام یا سرگرمیاں انجام دیتا ہوں جو کام کی جگہ کی حفاظت کو بہتر بنانے میں مدد کرتا ہوں۔']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I encourage my co-workers to work safely.', 'question_u'=>'میں اپنے ساتھی کارکنوں کو محفوظ طریقے سے کام کرنے کی ترغیب دیتا ہوں۔']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I help my co-workers when they are working under risky or hazardous conditions (endangering themselves)', 'question_u'=>'میں اپنے ساتھی کارکنوں کی مدد کرتا ہوں جب وہ خطرناک یا خطرناک حالات میں کام کر رہے ہوں (خود کو خطرے میں ڈال رہے ہوں)']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always prefer not to work alone at highly energized areas or where there is current of around 400volts.', 'question_u'=>'میں ہمیشہ زیادہ وولٹ والے علاقوں یا ان جگہوں پر جہاں تقریباً 400 وولٹ سے زیادہ کرنٹ ہو، اکیلے کام کرنے سے بچتا ہوں۔']);
-        $question = Question::create(['section_id'=>6, 'question_e'=> 'I always insist my co-workers to wear safety equipments even if it is uncomfortable', 'question_u'=>'میں ہمیشہ اپنے ساتھی کارکنوں سے حفاظتی سازوسامان پہننے کی تاکید کرتا ہوں ۔']);
     }
 }
